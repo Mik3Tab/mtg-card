@@ -11,11 +11,11 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
+    font: inherit;
   margin: 0;
-  padding: 0;
   border: 0;
+  padding: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -38,45 +38,57 @@ q:before, q:after {
   content: none;
 }
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
 }
-/* End of reset */
+
 body* > {
   box-sizing: border-box;
 }
+
+body {
+    position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #171717;
+  overflow: auto;
+
+}
+
 .card-container {
     border: 1px solid black;
     width: 500px;
     height: 700px;
     margin: 0 auto;
     margin-top: 56px;
-    border-radius: 25px;
     box-sizing: border-box;
     box-shadow: -8px 9px 16px -3px gray;
     background: #171314;  
+    border-radius: 25px;
 }
- .card-background {
+.card-background {
     height: 600px;
     margin: 20px 20px 0 20px;
+    z-index: 0;
+    display: flex;
+    background-size: cover;
+    background-color: #bbb;
+    background-image: url(https://image.ibb.co/e1XKAS/green_background.jpg);
+    background-repeat: no-repeat;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     border-bottom-left-radius: 8%;
     border-bottom-right-radius: 8%;
-    background-image: url(https://image.ibb.co/e1XKAS/green_background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    background-color: #bbb;
-    z-index: 0;
 }
 
 .frame-header,
 .frame-type-line {
-    border-bottom: 4px solid #a9a9a9;
-    border-left: 2px solid #a9a9a9;
     border-top: 1px solid #fff;
+    border-left: 2px solid #a9a9a9;
     border-right: 1px solid #fff;
+    border-bottom: 4px solid #a9a9a9;
 }
 
 .frame-header,
@@ -103,49 +115,47 @@ body* > {
 }
 
 .card-frame {
-    z-index: 1;
-    position: relative;
-    height: 108%;
-    max-width: 97%;
-    left: 1%;
     top: 0.5%;
-    left: 1.2%;
+    left: 1%;
+    height: 108%;
+    z-index: 1;
     display: flex;
+    position: relative;
+    max-width: 97%;
     flex-direction: column;
 }
 
 .frame-header,
 .frame-type-line {
+    display: flex;
+    padding: 8px 0;
     background: 
         linear-gradient( 0deg, rgba(201, 216, 201, .3), rgba(201, 216, 209, .3) ), 
         url(https://image.ibb.co/jKByZn/tile_bg_1.jpg);     
-    display: flex;
     margin-top: 10px;
     margin-left: 5px;
     margin-right: 5px;
-    padding: 8px 0;
-    display: flex;
-    justify-content: space-between;
     border-radius: 18px/40px;
+    justify-content: space-between;
 }
 
 .name,
 .type {
     font-size: 1.3em;
-    margin-left: 10px;
     align-self: center;
+    margin-left: 10px;
     font-weight: 600;
 }
 
 #mana-icon {
-    font-size: 1.4em;
-    background: #ADD3AC;
-    border-radius: 50%;
-    box-sizing: border-box;
-    box-shadow: -0.05em 0.12em 0px 0 black;
-    margin-right: 5px;
     height: 20px;
+    font-size: 1.4em;
+    box-sizing: border-box;
     align-self: center;
+    box-shadow: -0.05em 0.12em 0px 0 black;
+    background: #ADD3AC;
+    margin-right: 5px;
+    border-radius: 50%;
 }
 .frame-art {
     height: 50%;
@@ -153,8 +163,8 @@ body* > {
 }
 
 #set-icon {
-    height: 9%;
-    width: 6%;
+    height: 22px;
+    width: 25px;
     overflow: hidden;
     margin-right: 10px;
     align-self: center;
@@ -165,13 +175,13 @@ body* > {
 
 .frame-text-box {
     margin: 0 10px;
-    background: #d3ded6;
-    background-image: url(https://image.ibb.co/dFcNx7/tile_bg_2.jpg);
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;    
     padding: 50px 6px;
     font-size: 1.2em;
+    background: #d3ded6;
+    flex-direction: column;
+    justify-content: space-around;    
+    background-image: url(https://image.ibb.co/dFcNx7/tile_bg_2.jpg);
 }
 
 .flavour-text {
@@ -189,9 +199,9 @@ p {
 
 .frame-bottom-info {
     color: white;
+    margin: 5px 1px 0 1px; 
     display: flex;
     justify-content: space-between;
-    margin: 5px 15px 0 15px; 
 }
 
 fbi-left {
@@ -202,27 +212,37 @@ fbi-left {
 }
 .fbi-left,
 .fbi-right {
-    font-size: 10px;
-    position: relative;
     top: 6px;
+    position: relative;
+    font-size: 10px;
 }
 
 .fbi-center {
-    border-radius: 60%;
-    flex-basis: 41px;
+    bottom: 10px;
     height: 21px;
-    position: relative;
-    bottom: 11px;
     z-index: 2;
+    position: relative;
+    flex-basis: 40px;
     background: lightgray;
-    background-image: url(https://image.ibb.co/jyq34n/holofoil_texture_2.jpg);
     box-shadow: 
-        0 0 0 4px #171314;
+    0 0 0 4px #171314;
+    border-radius: 60%;
+    background-image: url(https://image.ibb.co/jyq34n/holofoil_texture_2.jpg);
 }
 .inner-margins {
     margin: 0 10px;
 }
 #brush-icon {
-    height: 5%;
     width: 5%;
+    height: 5%;
+}
+
+footer {
+    color: white;
+    display: flex;
+    padding: 30px;
+    font-size: large;
+    margin-top: auto;
+    font-family: monospace;
+    justify-content: center;
 }
