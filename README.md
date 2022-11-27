@@ -1,4 +1,4 @@
-# mtg-card
+# Magic: The Gathering card
 A project where i recreate a Magic: The Gathering card using HTML &amp; CSS. I plan to recreate this same project scaling the tools that i use, for example: using a framework to split the card in components, to build a card using its info stored in an API... fun stuff.
 
 I would like to develop something with one of my favourite games, Magic: The Gathering. I've always thought about how I would recreate Magic cards here. It's certainly super entertaining.
