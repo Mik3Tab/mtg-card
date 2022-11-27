@@ -7,5 +7,5 @@ I came across <a href="https://codeburst.io/make-a-magic-the-gathering-card-in-c
 
 I decided to recreate this article as a first contact. In the future, I want to:
 
-  # Recreate cards with a framework such as React or Angular, dividing a generic card model in components.
-  # Recreate a deck using a determined number of cards that will use that generic card model. 
+  · Recreate cards with a framework such as React or Angular, dividing a generic card model in components.
+  · Recreate a deck using a determined number of cards that will use that generic card model. 
